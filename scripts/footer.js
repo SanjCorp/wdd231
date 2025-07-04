@@ -1,6 +1,2 @@
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#copyright").innerHTML =
-    `© ${new Date().getFullYear()} Ricardo Sanjines - Bolivia`;
-  document.querySelector("#lastModified").textContent =
-    `Last Modified: ${document.lastModified}`;
-});
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = "Last Modified: " + document.lastModified;
