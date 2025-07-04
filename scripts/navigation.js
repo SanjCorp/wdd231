@@ -1,7 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const button = document.querySelector("#menu-btn");
-  const menu = document.querySelector("#menu");
-  button.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
+document.getElementById('menu-btn').addEventListener('click', () => {
+    document.getElementById('menu').classList.toggle('open');
 });
