@@ -1,60 +1,65 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Student home page for WDD231 course." />
-    <meta name="author" content="Student Name" />
-    <title>WDD231 Home</title>
-    <link rel="stylesheet" href="styles/small.css" />
-    <link rel="stylesheet" href="styles/large.css" media="(min-width: 640px)" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/footer.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Course home page of Ricardo Sanjines. Showcasing knowledge in electronics engineering, 3D printing and programming." />
+  <meta name="author" content="Ricardo Sanjines" />
+  <title>Ricardo Sanjines | WDD231 Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
 </head>
 <body>
-    <header>
-        <img src="images/logo.svg" alt="Site Logo" width="50">
-        <span>Student Name</span>
-        <button id="menu-btn">☰</button>
-    </header>
-    <nav id="menu">
-        <a href="#">Home</a>
-        <a href="#">Chamber Project</a>
-        <a href="#">Final Project</a>
-    </nav>
-    <main>
-        <h1>Home</h1>
-        <section class="about-me">
-            <h2>About Me</h2>
-            <p>I'm Ricardo Sanjines, an Electronic Engineering student passionate about technology, programming, and innovation. I've worked on software development, automation, and applied electronics projects, including 3D printing pricing systems and educational mobile apps. I specialize in creating practical solutions combining hardware and software, with experience in languages ​​such as Python, C#, HTML, CSS, and JavaScript.
+  <header>
+    <img src="images/logo.svg" alt="Site Logo" width="50" />
+    <span>Ricardo Sanjines</span>
+    <button id="menu-button" aria-label="Toggle Menu">☰</button>
+  </header>
 
-I'm currently promoting a 3D printing startup and developing an app to guide students in choosing their university major. My vision is to found a company that integrates robotics, software development, and technology investment under the Sanj Corporation brand. My motivation is to transform ideas into real solutions, layer by layer.</p>
-        </section>
-        <section class="photo">
-            <h2>Student Photo</h2>
-            <img src="images/photo.png" alt="Student Photo" width="200">
-        </section>
-        <section class="courses">
-            <h2>Web Certificate Courses</h2>
-            <div class="filters">
-                <button id="all">All</button>
-                <button id="cse">CSE</button>
-                <button id="wdd">WDD</button>
-            </div>
-            <div id="course-list"></div>
-            <p id="credit-total">Total credits: 0</p>
-        </section>
-    </main>
-    <footer>
-        <div class="socials">
-            <a href="#"><img src="images/github.png" alt="GitHub" width="32"></a>
-            <a href="#"><img src="images/linkedin.png" alt="LinkedIn" width="32"></a>
-        </div>
-        <p>&copy; <span id="year"></span> Student Name • Utah, USA</p>
-        <p id="lastModified"></p>
-    </footer>
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Chamber</a></li>
+      <li><a href="#">Final</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+
+    <section>
+      <h2>About Me</h2>
+      <img src="images/photo.png" alt="Photo of Ricardo Sanjines" width="200" />
+      <p>Soy Ricardo Sanjines, estudiante de Ingeniería Electrónica con pasión por la programación, el desarrollo web y la impresión 3D. Mis habilidades incluyen diseño de circuitos, programación en Python, C#, y desarrollo de interfaces web. Actualmente estoy trabajando en proyectos que combinan software y hardware para crear soluciones tecnológicas útiles.</p>
+    </section>
+
+    <section>
+      <h2>Web Development</h2>
+      <p>Este sitio demuestra mis conocimientos adquiridos en los cursos de desarrollo web. Incluye prácticas con HTML, CSS, JavaScript, diseño responsivo, SEO, accesibilidad y mejores prácticas. Aquí podrás ver cómo aplico estos conceptos en proyectos reales.</p>
+    </section>
+
+    <section>
+      <h2>Future Goals</h2>
+      <p>Quiero desarrollar soluciones en robótica, automatización, y aplicaciones móviles que impacten positivamente en mi comunidad. Busco crecer como desarrollador web y combinar mis habilidades electrónicas con software moderno para transformar ideas en productos funcionales.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://github.com/ricardosanjines" target="_blank">
+        <img src="images/github.png" alt="GitHub Logo" width="24" />
+      </a>
+      <a href="https://linkedin.com/in/ricardosanjines" target="_blank">
+        <img src="images/linkedin.png" alt="LinkedIn Logo" width="24" />
+      </a>
+    </div>
+    <p>&copy; <span id="year"></span> Ricardo Sanjines | Bolivia</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>
