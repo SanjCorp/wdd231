@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Course home page of Ricardo Sanjines. Showcasing knowledge in electronics engineering, 3D printing and programming." />
+  <meta name="description" content="Course home page of Ricardo Sanjines. Showcasing knowledge in electronics engineering, 3D printing, and programming." />
   <meta name="author" content="Ricardo Sanjines" />
   <title>Ricardo Sanjines | WDD231 Home</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles/small.css" />
   <link rel="stylesheet" href="styles/large.css" />
 
@@ -27,44 +28,45 @@
   <nav id="main-nav" class="hide">
     <ul>
       <li><a href="#">Home</a></li>
-      <li><a href="#">Chamber Project</a></li>
-      <li><a href="#">Final Project</a></li>
+      <li><a href="#">Chamber</a></li>
+      <li><a href="#">Final</a></li>
     </ul>
   </nav>
 
   <main>
-    <h1>Home</h1>
+    <h1>Ricardo Sanjines | WDD231 Home</h1>
 
     <section class="about-photo">
       <div class="about">
         <h2>About Me</h2>
-        <p>I'm Ricardo Sanjines, an electronics engineer with a passion for 3D printing, robotics, and full-stack development. I help students make better decisions about their careers through technology.</p>
+        <p>I’m an electronics engineering student passionate about technology, 3D printing, and software development.</p>
       </div>
       <div class="photo">
-        <h2>Student Photo</h2>
         <img src="images/photo.png" alt="Ricardo Sanjines Photo">
       </div>
     </section>
 
-    <section class="courses">
-      <h2>Web Certificate Courses</h2>
-      <div class="filter-buttons">
-        <button onclick="filterCourses('all')">All</button>
-        <button onclick="filterCourses('CSE')">CSE</button>
-        <button onclick="filterCourses('WDD')">WDD</button>
-      </div>
-      <div id="courses" class="course-list"></div>
-      <p id="totalCredits">The total credits for courses listed above is: 0</p>
+    <section class="filter-buttons">
+      <h2>Filter Courses</h2>
+      <button data-type="all">All</button>
+      <button data-type="WDD">WDD</button>
+      <button data-type="CSE">CSE</button>
+    </section>
+
+    <section>
+      <h2>Courses</h2>
+      <div id="courses"></div>
+      <p id="totalCredits">Total Credits: 0</p>
     </section>
   </main>
 
   <footer>
     <div class="social">
-      <a href="https://github.com" target="_blank"><img src="images/github.png" alt="GitHub"></a>
-      <a href="https://linkedin.com" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
-      <a href="https://linktr.ee/SanjCorp"><img src="images/other.png" alt="linktr.ee"></a>
+      <a href="https://github.com/tu-usuario" target="_blank"><img src="images/github.png" alt="GitHub Profile"></a>
+      <a href="https://linkedin.com/in/tu-usuario" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://linktr.ee/tu-usuario" target="_blank"><img src="images/other.png" alt="linktr.ee"></a>
     </div>
-    <p>&copy; <span id="year"></span> Ricardo Sanjines • Bolivia</p>
+    <p>&copy; <span id="year"></span> Ricardo Sanjines | Bolivia</p>
     <p id="lastModified"></p>
   </footer>
 </body>
