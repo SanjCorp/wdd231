@@ -17,12 +17,13 @@ header {
 }
 
 header img {
-  width: 40px;
+  width: 24px;
   height: auto;
+  margin-right: 0.5rem;
 }
 
-.site-name {
-  font-size: 1.2rem;
+header span {
+  font-size: 1.1rem;
   font-weight: bold;
 }
 
