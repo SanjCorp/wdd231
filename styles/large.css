@@ -28,4 +28,14 @@
   #menu-toggle {
     display: none;
   }
+
+  header img {
+    width: 28px;
+    height: auto;
+    margin-right: 0.5rem;
+  }
+
+  header span {
+    font-size: 1.3rem;
+  }
 }
