@@ -15,12 +15,13 @@ function displayCourses(filtered = courses) {
     const card = document.createElement("div");
     card.className = "course-card";
     if (course.completed) card.classList.add("completed");
-    card.innerHTML = `<strong>${course.code}</strong><br>${course.name}<br>Credits: ${course.credits}`;
+    card.innerHTML = `<h3>${course.code}</h3><p>${course.name}</p><p>Credits: ${course.credits}</p>`;
     container.appendChild(card);
     totalCredits += course.credits;
   });
 
-  document.getElementById("totalCredits").textContent = "Total Credits: " + totalCredits;
+  document.getElementById("totalCredits").textContent =
+    "The total credits for courses listed above is: " + totalCredits;
 }
 
 function filterCourses(type) {
