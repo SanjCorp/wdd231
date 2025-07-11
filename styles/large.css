@@ -1,1 +1,31 @@
-/* media queries go here */
+@media screen and (min-width: 768px) {
+  nav.hide {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav ul li {
+    border: none;
+  }
+
+  .about-photo {
+    flex-direction: row;
+  }
+
+  .about, .photo {
+    flex: 1;
+  }
+
+  .filter-buttons {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+}
