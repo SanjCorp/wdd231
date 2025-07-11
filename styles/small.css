@@ -1,0 +1,40 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
+header, nav, main, footer {
+  padding: 1rem;
+}
+#menu-toggle {
+  display: none;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+nav li {
+  margin-right: 1rem;
+}
+#courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.course-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  width: 100%;
+}
+.completed {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+@media (min-width: 600px) {
+  .course-card {
+    width: calc(33.333% - 2rem);
+  }
+}
