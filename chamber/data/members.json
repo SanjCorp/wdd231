@@ -1,60 +1,60 @@
 {
   "members": [
     {
-      "name": "Electronix SRL",
-      "address": "Av. Banzer #123, Santa Cruz",
-      "phone": "78945612",
-      "website": "https://electronix.com.bo",
-      "image": "electronix.png",
-      "membership": "Gold"
+      "name": "Electro Tech",
+      "address": "123 Main St, Santa Cruz",
+      "phone": "(591) 700-12345",
+      "website": "https://electrotech.bo",
+      "image": "electrotech.png",
+      "level": 3
     },
     {
-      "name": "3D Print Santa Cruz",
-      "address": "Calle Libertad 45, Santa Cruz",
-      "phone": "78451236",
-      "website": "https://3dprintsc.bo",
-      "image": "impresion3dsc.png",
-      "membership": "Silver"
+      "name": "3D Makers Bolivia",
+      "address": "Av. Libertador, Santa Cruz",
+      "phone": "(591) 755-32100",
+      "website": "https://3dmakers.bo",
+      "image": "3dmakers.png",
+      "level": 2
     },
     {
-      "name": "CodeMasters Bolivia",
-      "address": "Calle IT #90, Santa Cruz",
-      "phone": "71236548",
-      "website": "https://codemasters.bo",
-      "image": "codemasters.png",
-      "membership": "Gold"
+      "name": "CodeWorks",
+      "address": "Calle Real 45, Santa Cruz",
+      "phone": "(591) 700-45321",
+      "website": "https://codeworks.bo",
+      "image": "codeworks.png",
+      "level": 1
     },
     {
-      "name": "ElectroReparaciones",
-      "address": "Av. Alemana 555, Santa Cruz",
-      "phone": "75841236",
-      "website": "https://electroreparaciones.bo",
-      "image": "electroreparaciones.png",
-      "membership": "Member"
+      "name": "PrintLab",
+      "address": "Zona Sur, Santa Cruz",
+      "phone": "(591) 711-23232",
+      "website": "https://printlab.bo",
+      "image": "printlab.png",
+      "level": 2
     },
     {
-      "name": "DevBoost",
-      "address": "Av. Grigotá 1234, Santa Cruz",
-      "phone": "73216589",
-      "website": "https://devboost.bo",
-      "image": "devboost.png",
-      "membership": "Silver"
+      "name": "InnovaRobotics",
+      "address": "Av. Banzer 500, Santa Cruz",
+      "phone": "(591) 789-87654",
+      "website": "https://innovarobotics.bo",
+      "image": "innovarobotics.png",
+      "level": 3
     },
     {
-      "name": "MakerSpace SCZ",
-      "address": "Calle Maker 9, Santa Cruz",
-      "phone": "72145678",
-      "website": "https://makerspace.bo",
-      "image": "makerspace.png",
-      "membership": "Gold"
+      "name": "SmartNet",
+      "address": "Calle Abaroa, Santa Cruz",
+      "phone": "(591) 712-88443",
+      "website": "https://smartnet.bo",
+      "image": "smartnet.png",
+      "level": 1
     },
     {
-      "name": "Ingenium Electrónica",
-      "address": "Av. Cristo Redentor 300, Santa Cruz",
-      "phone": "74321234",
-      "website": "https://ingenium.bo",
-      "image": "ingenium.png",
-      "membership": "Member"
+      "name": "Sanj Corporation",
+      "address": "Tecnoparque, Santa Cruz",
+      "phone": "(591) 701-88888",
+      "website": "https://sanjcorp.bo",
+      "image": "sanjcorp.png",
+      "level": 3
     }
   ]
 }
