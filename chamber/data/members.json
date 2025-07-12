@@ -5,7 +5,7 @@
       "address": "123 Main St, Santa Cruz",
       "phone": "(591) 700-12345",
       "website": "https://electrotech.bo",
-      "image": "electrotech.png",
+      "images": "electrotech.png",
       "level": 3
     },
     {
@@ -13,7 +13,7 @@
       "address": "Av. Libertador, Santa Cruz",
       "phone": "(591) 755-32100",
       "website": "https://3dmakers.bo",
-      "image": "3dmakers.png",
+      "images": "3dmakers.png",
       "level": 2
     },
     {
@@ -21,7 +21,7 @@
       "address": "Calle Real 45, Santa Cruz",
       "phone": "(591) 700-45321",
       "website": "https://codeworks.bo",
-      "image": "codeworks.png",
+      "images": "codeworks.png",
       "level": 1
     },
     {
@@ -29,7 +29,7 @@
       "address": "Zona Sur, Santa Cruz",
       "phone": "(591) 711-23232",
       "website": "https://printlab.bo",
-      "image": "printlab.png",
+      "images": "printlab.png",
       "level": 2
     },
     {
@@ -37,7 +37,7 @@
       "address": "Av. Banzer 500, Santa Cruz",
       "phone": "(591) 789-87654",
       "website": "https://innovarobotics.bo",
-      "image": "innovarobotics.png",
+      "images": "innovarobotics.png",
       "level": 3
     },
     {
@@ -45,7 +45,7 @@
       "address": "Calle Abaroa, Santa Cruz",
       "phone": "(591) 712-88443",
       "website": "https://smartnet.bo",
-      "image": "smartnet.png",
+      "images": "smartnet.png",
       "level": 1
     },
     {
@@ -53,7 +53,7 @@
       "address": "Tecnoparque, Santa Cruz",
       "phone": "(591) 701-88888",
       "website": "https://sanjcorp.bo",
-      "image": "sanjcorp.png",
+      "images": "sanjcorp.png",
       "level": 3
     }
   ]
