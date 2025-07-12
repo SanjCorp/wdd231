@@ -1,0 +1,60 @@
+{
+  "members": [
+    {
+      "name": "Electronix SRL",
+      "address": "Av. Banzer #123, Santa Cruz",
+      "phone": "78945612",
+      "website": "https://electronix.com.bo",
+      "image": "electronix.png",
+      "membership": "Gold"
+    },
+    {
+      "name": "3D Print Santa Cruz",
+      "address": "Calle Libertad 45, Santa Cruz",
+      "phone": "78451236",
+      "website": "https://3dprintsc.bo",
+      "image": "impresion3dsc.png",
+      "membership": "Silver"
+    },
+    {
+      "name": "CodeMasters Bolivia",
+      "address": "Calle IT #90, Santa Cruz",
+      "phone": "71236548",
+      "website": "https://codemasters.bo",
+      "image": "codemasters.png",
+      "membership": "Gold"
+    },
+    {
+      "name": "ElectroReparaciones",
+      "address": "Av. Alemana 555, Santa Cruz",
+      "phone": "75841236",
+      "website": "https://electroreparaciones.bo",
+      "image": "electroreparaciones.png",
+      "membership": "Member"
+    },
+    {
+      "name": "DevBoost",
+      "address": "Av. Grigotá 1234, Santa Cruz",
+      "phone": "73216589",
+      "website": "https://devboost.bo",
+      "image": "devboost.png",
+      "membership": "Silver"
+    },
+    {
+      "name": "MakerSpace SCZ",
+      "address": "Calle Maker 9, Santa Cruz",
+      "phone": "72145678",
+      "website": "https://makerspace.bo",
+      "image": "makerspace.png",
+      "membership": "Gold"
+    },
+    {
+      "name": "Ingenium Electrónica",
+      "address": "Av. Cristo Redentor 300, Santa Cruz",
+      "phone": "74321234",
+      "website": "https://ingenium.bo",
+      "image": "ingenium.png",
+      "membership": "Member"
+    }
+  ]
+}

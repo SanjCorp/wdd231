@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Directory of members for the Santa Cruz Chamber of Commerce." />
+  <meta name="author" content="Ricardo Sanjines" />
+
+  <!-- Social Media Meta -->
+  <meta property="og:title" content="Santa Cruz Chamber Directory" />
+  <meta property="og:description" content="Discover local businesses that support the Santa Cruz Chamber of Commerce." />
+  <meta property="og:image" content="images/logo.png" />
+  <meta property="og:url" content="https://tugithubusername.github.io/wdd231/chamber/directory.html" />
+
+  <title>Directory | Santa Cruz Chamber</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/directory.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Santa Cruz Chamber Logo">
+    <h1>Santa Cruz Chamber of Commerce</h1>
+    <button id="menu-toggle">☰</button>
+  </header>
+
+  <nav id="main-nav" class="hide">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="#">Discover</a></li>
+      <li><a href="#">Join</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="view-buttons">
+      <button id="grid-btn">Grid View</button>
+      <button id="list-btn">List View</button>
+    </section>
+    <section id="members-container" class="grid-view"></section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Ricardo Sanjines | WDD 231 | Santa Cruz, Bolivia</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
