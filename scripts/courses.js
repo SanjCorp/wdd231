@@ -9,7 +9,6 @@ const courses = [
 function displayCourses(filtered = courses) {
   const container = document.getElementById("courses");
   container.innerHTML = "";
-  let totalCredits = 0;
 
   filtered.forEach(course => {
     const card = document.createElement("div");
@@ -17,18 +16,26 @@ function displayCourses(filtered = courses) {
     if (course.completed) card.classList.add("completed");
     card.innerHTML = `<h3>${course.code}</h3><p>${course.name}</p><p>Credits: ${course.credits}</p>`;
     container.appendChild(card);
-    totalCredits += course.credits;
   });
 
+  const totalCredits = filtered.reduce((sum, course) => sum + course.credits, 0);
   document.getElementById("totalCredits").textContent =
     "The total credits for courses listed above is: " + totalCredits;
 }
 
 function filterCourses(type) {
-  let filtered = [];
-  if (type === "all") filtered = courses;
-  else filtered = courses.filter(c => c.code.startsWith(type));
+  const filtered =
+    type === "all" ? courses : courses.filter(course => course.code.startsWith(type));
   displayCourses(filtered);
 }
 
-document.addEventListener("DOMContentLoaded", () => displayCourses());
+document.addEventListener("DOMContentLoaded", () => {
+  displayCourses();
+
+  document.querySelectorAll(".filter-buttons button").forEach(button => {
+    button.addEventListener("click", () => {
+      const type = button.getAttribute("data-type");
+      filterCourses(type);
+    });
+  });
+});
