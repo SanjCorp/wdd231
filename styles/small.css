@@ -136,6 +136,12 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+#courses {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
 
 footer .social img {
   width: 30px;
