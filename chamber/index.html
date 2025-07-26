@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Welcome to the Santa Cruz Chamber of Commerce home page." />
+  <meta name="author" content="Ricardo Sanjines" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Santa Cruz Chamber Home" />
+  <meta property="og:description" content="Engage with the Santa Cruz Chamber of Commerce today." />
+  <meta property="og:image" content="images/logo.png" />
+  <meta property="og:url" content="https://tugithubusername.github.io/wdd231/chamber/index.html" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/styles.css" />
+
+  <!-- Scripts -->
+  <script src="scripts/menu.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlight.js" defer></script>
+
+  <title>Home | Santa Cruz Chamber</title>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Santa Cruz Chamber Logo" />
+    <h1>Santa Cruz Chamber of Commerce</h1>
+    <button id="menu-toggle">☰</button>
+  </header>
+
+  <nav class="hide" id="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="#">Join</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Welcome to Santa Cruz Chamber" />
+      <div class="hero-text">
+        <h2>Connect. Grow. Succeed.</h2>
+        <a href="#" class="cta-button">Join the Chamber</a>
+      </div>
+    </section>
+
+    <!-- Current Events -->
+    <section class="events">
+      <h2>Current Events</h2>
+      <ul>
+        <li>🗓️ Aug 5: Business Networking Night</li>
+        <li>🗓️ Aug 12: Workshop: Digital Marketing for Local Businesses</li>
+        <li>🗓️ Aug 19: Chamber Members Breakfast</li>
+      </ul>
+    </section>
+
+    <!-- Weather -->
+    <section class="weather">
+      <h2>Current Weather</h2>
+      <div id="weather">
+        <p>Loading weather data...</p>
+      </div>
+    </section>
+
+    <!-- Spotlights -->
+    <section class="spotlights">
+      <h2>Member Spotlights</h2>
+      <div id="spotlight-container" class="grid-view"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Santa Cruz Chamber | Ricardo Sanjines | WDD 231</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
