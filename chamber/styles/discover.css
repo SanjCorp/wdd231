@@ -57,29 +57,4 @@
   .card-container {
     grid-template-columns: repeat(4, 1fr);
   }
-  .card-container {
-  display: grid;
-  gap: 1rem;
-  padding: 1rem;
 }
-
-@media (min-width: 320px) {
-  .card-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 641px) {
-  .card-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1025px) {
-  .card-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-}
-
