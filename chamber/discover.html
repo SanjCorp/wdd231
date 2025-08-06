@@ -1,44 +1,62 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en-US">
 <head>
+  <!-- Meta Charset -->
   <meta charset="UTF-8">
+
+  <!-- Meta Viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Descubre | Cámara de Comercio de Santa Cruz</title>
-  <meta name="description" content="Explora las atracciones y características de Santa Cruz, Bolivia.">
-  <meta name="author" content="Ricardo Sanjinés">
-  <link rel="icon" href="images/favicon.ico">
 
-  <!-- Open Graph Metadata -->
-  <meta property="og:title" content="Descubre Santa Cruz con la Cámara de Comercio">
-  <meta property="og:description" content="Conoce los puntos destacados, cultura y atracciones de Santa Cruz, Bolivia. Vive la experiencia.">
-  <meta property="og:image" content="images/og-image.jpg">
-  <meta property="og:url" content="https://tusitio.com/discover.html">
+  <!-- Título de la Página -->
+  <title>Discover | Santa Cruz Chamber of Commerce</title>
+
+  <!-- Meta Descripción -->
+  <meta name="description" content="Descubre los atractivos, eventos y puntos de interés que ofrece Santa Cruz, Bolivia. Una guía visual para residentes y visitantes.">
+
+  <!-- Autor -->
+  <meta name="author" content="Ricardo Sanjines">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Meta Open Graph (para redes sociales) -->
+  <meta property="og:title" content="Descubre Santa Cruz | Cámara de Comercio">
+  <meta property="og:description" content="Explora los mejores lugares, eventos y actividades que ofrece Santa Cruz, Bolivia, a través de nuestra página Discover.">
+  <meta property="og:image" content="images/og-image.jpg"> <!-- Usa una imagen local, guárdala en images/ -->
+  <meta property="og:url" content="https://tuusuario.github.io/wdd231/chamber/discover.html">
   <meta property="og:type" content="website">
-
-  <!-- Enlace al archivo CSS externo -->
-  <link rel="stylesheet" href="styles/discover.css">
 </head>
+
 <body>
   <header>
-    <h1>Descubre Santa Cruz</h1>
-    <!-- Aquí puedes agregar navegación si es necesario -->
+    <img src="images/logo.png" alt="Santa Cruz Chamber Logo" />
+    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="hide" id="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html" class="active">Discover</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Atracciones principales</h2>
-      <p>Santa Cruz de la Sierra ofrece una variedad de atracciones turísticas, culturales y naturales...</p>
-      <!-- Puedes incluir imágenes y más secciones aquí -->
+  <main class="discover-grid">
+    <aside class="sidebar">
+      <div id="visit-message"></div>
+    </aside>
+
+    <section class="gallery">
+      <h1>Discover Santa Cruz</h1>
+      <div id="discover-cards" class="card-container"></div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Cámara de Comercio de Santa Cruz</p>
+    <p>&copy; <span id="year"></span> Santa Cruz Chamber | Ricardo Sanjines</p>
+    <p id="lastModified"></p>
   </footer>
 
-  <script>
-    // Año dinámico
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="scripts/discover.js"></script>
 </body>
 </html>
