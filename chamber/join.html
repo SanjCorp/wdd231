@@ -1,84 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Join the Santa Cruz Chamber of Commerce and become a part of our business community." />
-  <meta property="og:title" content="Join the Santa Cruz Chamber" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/og-image.jpg" />
-  <meta property="og:url" content="https://www.santacruzchamber.com/join.html" />
-  <title>Join the Chamber</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Join | Santa Cruz Chamber</title>
+  <meta name="description" content="Apply to join the Santa Cruz Chamber of Commerce" />
+  <meta name="author" content="Ricardo Sanjines" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/join.css" />
+  <script defer src="scripts/join.js"></script>
 </head>
 <body>
   <header>
-    <img src="images/logo.webp" alt="Chamber Logo" width="120" />
-    <h1>Join the Chamber</h1>
-    <nav>
-      <button id="menu"></button>
-      <ul class="navigation">
+    <img src="images/logo.png" alt="Santa Cruz Chamber Logo" />
+    <button id="menu-toggle">☰</button>
+    <nav class="hide" id="main-nav">
+      <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="discover.html">Discover</a></li>
         <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html" class="active">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <form action="thankyou.html" method="get">
-      <fieldset>
-        <legend>Applicant Information</legend>
+    <h1>Join the Chamber</h1>
+    <div class="form‑cards‑layout">
+      <form method="get" action="thankyou.html" class="membership-form">
+        <label>
+          First Name:
+          <input type="text" name="fname" title="First Name" required autocomplete="given-name" />
+        </label>
+        <label>
+          Last Name:
+          <input type="text" name="lname" title="Last Name" required autocomplete="family-name" />
+        </label>
+        <label>
+          Organizational Title:
+          <input type="text" name="orgtitle" title="Organizational Title"
+                 autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" />
+        </label>
+        <label>
+          Email:
+          <input type="email" name="email" title="Email" required autocomplete="email"
+                 placeholder="name@example.com" />
+        </label>
+        <label>
+          Mobile Phone:
+          <input type="tel" name="phone" title="Mobile Phone" required autocomplete="tel" />
+        </label>
+        <label>
+          Organization Name:
+          <input type="text" name="orgname" title="Organization Name" required autocomplete="organization" />
+        </label>
+        <label>
+          Membership Level:
+          <select name="membership" title="Membership Level" required>
+            <option value="">Select a level</option>
+            <option value="NP">NP Membership</option>
+            <option value="Bronze">Bronze</option>
+            <option value="Silver">Silver</option>
+            <option value="Gold">Gold</option>
+          </select>
+        </label>
+        <label>
+          Organization Description:
+          <textarea name="orgdesc" title="Business Description" rows="4"></textarea>
+        </label>
+        <input type="hidden" name="timestamp" id="timestamp" />
 
-        <label for="firstName">First Name*:</label>
-        <input type="text" id="firstName" name="firstName" required />
+        <input type="submit" value="Join Now" />
+      </form>
 
-        <label for="lastName">Last Name*:</label>
-        <input type="text" id="lastName" name="lastName" required />
+      <section class="membership-cards">
+        <div class="card" id="np-card"><h2>NP Membership</h2><p>Non‑profit, no cost.</p><a href="#np-modal">More Info</a></div>
+        <div class="card" id="bronze-card"><h2>Bronze</h2><p>Basic benefits.</p><a href="#bronze-modal">More Info</a></div>
+        <div class="card" id="silver-card"><h2>Silver</h2><p>Event discounts & ads.</p><a href="#silver-modal">More Info</a></div>
+        <div class="card" id="gold-card"><h2>Gold</h2><p>Premium VIP access.</p><a href="#gold-modal">More Info</a></div>
+      </section>
+    </div>
 
-        <label for="title">Title/Position:</label>
-        <input type="text" id="title" name="title" pattern="^[A-Za-z\s\-]{7,}$" />
+    <!-- Modals here (as previously given)... -->
 
-        <label for="email">Email*:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="phone">Mobile Phone Number:</label>
-        <input type="tel" id="phone" name="phone" />
-
-        <label for="organization">Organization Name*:</label>
-        <input type="text" id="organization" name="organization" required />
-
-        <label for="description">Business Description:</label>
-        <textarea id="description" name="description" rows="4" cols="50"></textarea>
-      </fieldset>
-
-      <fieldset>
-        <legend>Membership Level</legend>
-        <label><input type="radio" name="membership" value="np" required /> NP Membership (No Fee)</label>
-        <label><input type="radio" name="membership" value="bronze" /> Bronze Membership</label>
-        <label><input type="radio" name="membership" value="silver" /> Silver Membership</label>
-        <label><input type="radio" name="membership" value="gold" /> Gold Membership</label>
-      </fieldset>
-
-      <fieldset>
-        <legend>Terms and Conditions</legend>
-        <label for="timestamp">Submission Date:</label>
-        <input type="date" id="timestamp" name="timestamp" />
-
-        <label><input type="checkbox" name="agreement" value="yes" required /> I agree to the terms and conditions.</label>
-      </fieldset>
-
-      <input type="submit" value="Join Now" class="submitBtn" />
-    </form>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Santa Cruz Chamber</p>
+    <p>&copy; <span id="year"></span> Santa Cruz Chamber | Ricardo Sanjines</p>
     <p id="lastModified"></p>
   </footer>
-
-  <script src="scripts/menu.js"></script>
-  <script src="scripts/footer.js"></script>
 </body>
 </html>
