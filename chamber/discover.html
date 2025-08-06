@@ -15,21 +15,27 @@
   
   <!-- Autor del documento -->
   <meta name="author" content="Ricardo Sanjinés">
-
+  
+  <!-- Meta robots para SEO -->
+  <meta name="robots" content="index, follow">
+  
   <!-- Ícono de pestaña -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   
   <!-- Meta OG (Open Graph) para compartir en redes sociales -->
   <meta property="og:title" content="Descubre Santa Cruz con la Cámara de Comercio">
   <meta property="og:description" content="Descubre oportunidades, atracciones y negocios en Santa Cruz, Bolivia. Apoya el desarrollo local con la Cámara de Comercio.">
-  <meta property="og:image" content="images/og-image.jpg"> <!-- Asegúrate de que esta imagen exista en tu proyecto -->
-  <meta property="og:url" content="https://tusitio.github.io/descubre.html"> <!-- Reemplaza con tu URL en GitHub Pages -->
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://tusitio.github.io/descubre.html">
   <meta property="og:type" content="website">
+
+  <!-- Estilos CSS (separados para mejor organización) -->
+  <link rel="stylesheet" href="styles/discover.css">
 </head>
 
 <body>
   <header>
-    <img src="images/logo.png" alt="Santa Cruz Chamber Logo" />
+    <img src="images/logo.png" alt="Logo de la Cámara de Comercio de Santa Cruz" />
     <button id="menu-toggle" aria-label="Toggle menu">☰</button>
     <nav class="hide" id="main-nav">
       <ul>
@@ -57,6 +63,24 @@
     <p id="lastModified"></p>
   </footer>
 
+  <!-- Scripts JS -->
+  <script>
+    // Footer dinámico: año actual
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Fecha de última modificación del documento
+    document.getElementById("lastModified").textContent = "Última modificación: " + document.lastModified;
+
+    // Toggle del menú de navegación
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("main-nav");
+
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("hide");
+    });
+  </script>
+
+  <!-- Script externo para la galería de Discover -->
   <script src="scripts/discover.js"></script>
 </body>
 </html>
