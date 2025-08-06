@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <header><!-- header común --></header>
+
+  <main>
+    <h1>Thank You for Joining!</h1>
+    <p><strong>First Name:</strong> <span id="fname"></span></p>
+    <p><strong>Last Name:</strong> <span id="lname"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Phone:</strong> <span id="phone"></span></p>
+    <p><strong>Organization:</strong> <span id="orgname"></span></p>
+    <p><strong>Submission Time:</strong> <span id="timestamp"></span></p>
+  </main>
+
+  <footer><!-- footer común --></footer>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    document.getElementById("fname").textContent = params.get("fname");
+    document.getElementById("lname").textContent = params.get("lname");
+    document.getElementById("email").textContent = params.get("email");
+    document.getElementById("phone").textContent = params.get("phone");
+    document.getElementById("orgname").textContent = params.get("orgname");
+    document.getElementById("timestamp").textContent = params.get("timestamp");
+  </script>
+</body>
+</html>
