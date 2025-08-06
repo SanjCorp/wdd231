@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover | Santa Cruz Chamber of Commerce</title>
+  <meta name="description" content="Explore attractions and features of Santa Cruz, Bolivia." />
+  <meta name="author" content="Ricardo Sanjines" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/discover.css" />
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Santa Cruz Chamber Logo" />
+    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="hide" id="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html" class="active">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="discover-grid">
+    <aside class="sidebar">
+      <div id="visit-message"></div>
+    </aside>
+
+    <section class="gallery">
+      <h1>Discover Santa Cruz</h1>
+      <div id="discover-cards" class="card-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Santa Cruz Chamber | Ricardo Sanjines</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="scripts/discover.js"></script>
+</body>
+</html>
