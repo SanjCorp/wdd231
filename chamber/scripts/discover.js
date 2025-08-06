@@ -1,62 +1,51 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const cardsContainer = document.getElementById("discover-cards");
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('discover-cards');
+  const visitMessage = document.getElementById('visit-message');
 
-  // Mensaje de visita anterior
-  const sidebar = document.querySelector(".sidebar");
-  const lastVisit = localStorage.getItem("lastVisit");
-  const now = Date.now();
+  fetch('data/discover.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Error cargando JSON.");
+      }
+      return response.json();
+    })
+    .then(data => {
+      data.places.forEach(place => {
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        card.innerHTML = `
+          <h2>${place.name}</h2>
+          <figure>
+            <img src="${place.image}" alt="${place.name}">
+          </figure>
+          <address>${place.address}</address>
+          <p>${place.description}</p>
+          <button>Learn More</button>
+        `;
+
+        container.appendChild(card);
+      });
+    })
+    .catch(error => {
+      container.innerHTML = `<p>Error al cargar el contenido.</p>`;
+      console.error("Error cargando discover.json:", error);
+    });
+
+  // LocalStorage Visitor Message
+  const lastVisit = localStorage.getItem('lastVisit');
+  const currentVisit = Date.now();
 
   if (!lastVisit) {
-    sidebar.textContent = "¡Bienvenido! Déjanos saber si tienes alguna pregunta.";
+    visitMessage.textContent = "Welcome! Let us know if you have any questions.";
   } else {
-    const days = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
-    if (days === 0) {
-      sidebar.textContent = "¡Has vuelto pronto! ¡Genial!";
+    const daysPassed = Math.floor((currentVisit - lastVisit) / (1000 * 60 * 60 * 24));
+    if (daysPassed < 1) {
+      visitMessage.textContent = "Back so soon! Awesome!";
     } else {
-      sidebar.textContent = `Tu última visita fue hace ${days} día${days === 1 ? "" : "s"}.`;
+      visitMessage.textContent = `You last visited ${daysPassed} day${daysPassed === 1 ? '' : 's'} ago.`;
     }
   }
 
-  localStorage.setItem("lastVisit", now);
-
-  // Cargar discover.json
-  fetch("data/discover.json")
-    .then((response) => response.json())
-    .then((data) => {
-      data.forEach((item) => {
-        const card = document.createElement("section");
-        card.classList.add("discover-card");
-
-        const title = document.createElement("h2");
-        title.textContent = item.name;
-
-        const figure = document.createElement("figure");
-        const img = document.createElement("img");
-        img.src = item.image;
-        img.alt = item.name;
-        img.loading = "lazy"; // ✅ lazy loading
-        figure.appendChild(img);
-
-        const address = document.createElement("address");
-        address.textContent = item.address;
-
-        const description = document.createElement("p");
-        description.textContent = item.description;
-
-        const button = document.createElement("button");
-        button.textContent = "Más información";
-
-        card.appendChild(title);
-        card.appendChild(figure);
-        card.appendChild(address);
-        card.appendChild(description);
-        card.appendChild(button);
-
-        cardsContainer.appendChild(card);
-      });
-    })
-    .catch((error) => {
-      console.error("Error cargando discover.json:", error);
-      cardsContainer.textContent = "Error al cargar el contenido.";
-    });
+  localStorage.setItem('lastVisit', currentVisit);
 });
