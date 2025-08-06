@@ -1,71 +1,144 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="description" content="Join the Santa Cruz Chamber of Commerce to grow your business and connect with the community.">
-  <meta name="author" content="Ricardo Sanjines">
-  <link rel="icon" href="images/favicon.ico">
-  
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Join the Santa Cruz Chamber of Commerce">
-  <meta property="og:description" content="Become a member of the Santa Cruz Chamber and enjoy exclusive benefits, networking events, and community support.">
-  <meta property="og:image" content="images/og-image.jpg">
-  <meta property="og:url" content="https://www.santacruzchamber.com/join.html">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Join | Santa Cruz Chamber</title>
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="styles/join.css">
+  <meta name="description" content="Join the Santa Cruz Chamber of Commerce" />
+  <meta name="author" content="Ricardo Sanjines" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/join.css" />
+  <script defer src="scripts/join.js"></script>
 </head>
 <body>
-
   <header>
-    <h1>Join the Chamber</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="join.html" class="active">Join</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <!-- Tu header/nav común aquí -->
   </header>
 
   <main>
-    <form action="thankyou.html" method="get">
-      <label for="first-name">First Name:</label>
-      <input type="text" id="first-name" name="first-name" required>
+    <h1>Join the Chamber</h1>
+    <form method="get" action="thankyou.html" class="membership-form">
+      <label>
+        First Name:
+        <input type="text" name="fname" title="First Name" required autocomplete="given-name" />
+      </label>
 
-      <label for="last-name">Last Name:</label>
-      <input type="text" id="last-name" name="last-name" required>
+      <label>
+        Last Name:
+        <input type="text" name="lname" title="Last Name" required autocomplete="family-name" />
+      </label>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <label>
+        Organizational Title:
+        <input type="text" name="orgtitle" title="Organizational Title" autocomplete="organization-title"
+               pattern="[A-Za-z\s\-]{7,}" />
+      </label>
 
-      <label for="phone">Phone:</label>
-      <input type="tel" id="phone" name="phone" required>
+      <label>
+        Email:
+        <input type="email" name="email" title="Email" required autocomplete="email" placeholder="name@example.com" />
+      </label>
 
-      <label for="business-name">Business Name:</label>
-      <input type="text" id="business-name" name="business-name" required>
+      <label>
+        Mobile Phone:
+        <input type="tel" name="phone" title="Mobile Phone" required autocomplete="tel" />
+      </label>
 
-      <label for="business-description">Business Description:</label>
-      <textarea id="business-description" name="business-description" required></textarea>
+      <label>
+        Organization Name:
+        <input type="text" name="orgname" title="Organization Name" required autocomplete="organization" />
+      </label>
 
-      <input type="hidden" name="form-type" value="join-form">
+      <label>
+        Membership Level:
+        <select name="membership" title="Membership Level" required>
+          <option value="">Select a level</option>
+          <option value="NP">NP Membership</option>
+          <option value="Bronze">Bronze</option>
+          <option value="Silver">Silver</option>
+          <option value="Gold">Gold</option>
+        </select>
+      </label>
 
-      <input type="submit" value="Join Now">
+      <label>
+        Organization Description:
+        <textarea name="orgdesc" title="Business Description" rows="4"></textarea>
+      </label>
+
+      <input type="hidden" name="timestamp" id="timestamp" />
+
+      <input type="submit" value="Join Now" />
     </form>
+
+    <!-- Membership Cards with Animation -->
+    <section class="membership-cards">
+      <div class="card" id="np-card">
+        <h2>NP Membership</h2>
+        <p>No cost for non-profit organizations.</p>
+        <a href="#np-modal">More Info</a>
+      </div>
+
+      <div class="card" id="bronze-card">
+        <h2>Bronze</h2>
+        <p>Basic membership benefits.</p>
+        <a href="#bronze-modal">More Info</a>
+      </div>
+
+      <div class="card" id="silver-card">
+        <h2>Silver</h2>
+        <p>Includes advertising and event discounts.</p>
+        <a href="#silver-modal">More Info</a>
+      </div>
+
+      <div class="card" id="gold-card">
+        <h2>Gold</h2>
+        <p>All-inclusive premium membership.</p>
+        <a href="#gold-modal">More Info</a>
+      </div>
+    </section>
+
+    <!-- Modals -->
+    <dialog id="np-modal">
+      <h3>NP Membership Benefits</h3>
+      <ul>
+        <li>Free membership for non-profits</li>
+        <li>Event access</li>
+        <li>Newsletter listing</li>
+      </ul>
+      <button onclick="document.getElementById('np-modal').close()">Close</button>
+    </dialog>
+
+    <dialog id="bronze-modal">
+      <h3>Bronze Membership Benefits</h3>
+      <ul>
+        <li>Event invitations</li>
+        <li>Training access</li>
+      </ul>
+      <button onclick="document.getElementById('bronze-modal').close()">Close</button>
+    </dialog>
+
+    <dialog id="silver-modal">
+      <h3>Silver Membership Benefits</h3>
+      <ul>
+        <li>Advertising on homepage</li>
+        <li>Event discounts</li>
+      </ul>
+      <button onclick="document.getElementById('silver-modal').close()">Close</button>
+    </dialog>
+
+    <dialog id="gold-modal">
+      <h3>Gold Membership Benefits</h3>
+      <ul>
+        <li>Priority event listing</li>
+        <li>Large spotlight ads</li>
+        <li>VIP invitations</li>
+      </ul>
+      <button onclick="document.getElementById('gold-modal').close()">Close</button>
+    </dialog>
   </main>
 
   <footer>
-    <p>&copy; 2025 Santa Cruz Chamber of Commerce</p>
-    <div class="social-icons">
-      <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
-      <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
-      <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
-    </div>
+    <!-- Tu footer común aquí -->
   </footer>
-
-  <script src="scripts/main.js"></script>
 </body>
 </html>
