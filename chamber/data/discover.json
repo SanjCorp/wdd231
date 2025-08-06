@@ -1,54 +1,52 @@
 {
   "places": [
-   {
-    "name": "Plaza 24 de Septiembre",
-    "address": "Centro histórico, Santa Cruz de la Sierra",
-    "description": "Corazón de la ciudad con catedral, palmeras y ambiente histórico.",
-    "image": "images/plaza.webp"
-  },
-  {
-    "name": "Jardín Botánico",
-    "address": "Km 8 Carretera al Norte, Santa Cruz",
-    "description": "Espacio natural con flora endémica ideal para caminatas.",
-    "image": "images/botanico.webp"
-  },
+    {
+      "name": "Plaza 24 de Septiembre",
+      "image": "images/plaza.webp",
+      "address": "Plaza Principal, Santa Cruz",
+      "description": "Heart of the city with statues, cafés and concerts."
+    },
+    {
+      "name": "Jardín Botánico",
+      "image": "images/botanico.webp",
+      "address": "Km 8 Carretera al Sur, Santa Cruz",
+      "description": "Beautiful landscapes, native plants and trails."
+    },
     {
       "name": "Catedral Metropolitana",
+      "image": "images/catedral.webp",
       "address": "Calle Sucre, Santa Cruz",
-      "description": "Neo-Gothic architecture at the city center.",
-            "image": "images/catedral.webp"
+      "description": "Neo-Gothic architecture at the city center."
     },
     {
       "name": "Feria ExpoCruz",
+      "image": "images/feria.webp",
       "address": "Av. Roca y Coronado, Santa Cruz",
-      "description": "Commercial fair with local vendors and events.",
-            "image": "images/feria.webp"
+      "description": "Commercial fair with local vendors and events."
     },
     {
       "name": "Biocentro Güembé",
+      "image": "images/biocentro.webp",
       "address": "Km 7, Camino a Porongo",
-      "description": "Eco-park with butterflies, orchids, and more.",
-            "image": "images/biocentro.webp"
+      "description": "Eco-park with butterflies, orchids, and more."
     },
     {
       "name": "Museo de Historia Regional",
+      "image": "images/museo.webp",
       "address": "Centro Histórico, Santa Cruz",
-      "description": "Local history and cultural exhibitions.",
-            "image": "images/museo.webp"
+      "description": "Local history and cultural exhibitions."
     },
     {
       "name": "Bahía de Warnes",
+      "image": "images/bahia.webp",
       "address": "Warnes, Santa Cruz",
-      "description": "Scenic waterfront and recreational area.",
-            "image": "images/bahia.webp"
+      "description": "Scenic waterfront and recreational area."
     },
     {
       "name": "La Rinconada Mall",
+      "image": "images/rinconada.webp",
       "address": "Av. La Salle, Santa Cruz",
-      "description": "Largest shopping center and dining in town.",
-            "image": "images/rinconada.webp"
+      "description": "Largest shopping center and dining in town."
     }
   ]
 }
-
-
